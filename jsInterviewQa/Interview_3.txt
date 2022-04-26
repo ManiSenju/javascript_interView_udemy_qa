@@ -1,0 +1,295 @@
+------------Deloitte---------------------------
+
+1.HTML5 new form elemenmts.
+2.DOM and its usage.
+3.DOM node selector.
+4.HTML DOM query selector method.
+5.Doctype declaration in html.
+6.What happens if Doctype is not defined in HTML file.
+7.What are semanrtic elements in HTML5.
+
+8.How do you set expiration time for session storage and local storage in HTML and JS.
+9.What are HTML block and inline elements.
+10.How 5 to 6 spans appear inside the div in HTML.
+11.How do you display inline span inside div.
+12.What is CSS box model.
+13.What is CSS button padding.
+14. What are CSS buttons.
+15.What is short hand property in CSS and explain CSS borders short hand property.
+16.How do you make site responsive in mobile(HTML/CSS).
+17.What is flex property in CSS.
+18.What is float left in CSS.
+19.CSS layout float and clear properties.
+20.Differences between let and var.
+21.Differences between let and const.
+22.Arrow functions in JS.
+23.What is inline arrow functions and advantages.
+24.What are template literals in JS.
+25.What are immediately invoked functions.
+26.Difference between for and forEach in JS.
+27.Array pusing ,deletion.
+28.Reduce method in JS.
+29.React components.
+30.State vs Props.
+31.Hooks and usage.
+32.middleware.
+33.Redux y?
+34.Coversion of functional comp to class component.
+35.Name some react routing libraries used.
+36.Life cycle methods.
+
+Misc:
+
+1.Explain about JS backend process(v8 engine).
+2.HTML meta tags.
+3.Prototypal inheritance.
+
+
+--------------------Cognizant-------------------------------------
+
+1. What is DOM and how does it work.
+2. How can we manipulate the DOM.(How can you change the DOM).
+3. Can we manipulate DOM with HTML ,JS or both.
+4. Difference between div and span.
+5. How can we draw horizantal line in a webpage.
+6. Why div is called container of the tags.
+7. Why we use meta tags.
+8. What is CSS box model.
+9. What is the diffrence between padding and margin.
+10. What is event propagation.
+11. What is the default behaviour of the event loop or event propagation.
+12. What is a react? And why react is used.
+13. What is react router dom.
+14. What are the diffrent types of routers we have.
+15. How can we stop multiple re renderings.
+16. What is use callback hook.
+
+
+
+------------------------------VueData--------------------------------
+
+Level:2
+
+1.WAP to remove duplicates in an array.
+2.How will you make a web page responsive in react.
+3.Write the class component syntax.
+4.UseState() hook usage.
+5.What exactly is redux.
+6.Differences b/w class and functional component.
+7.Is it needed to use state in redux.
+
+
+------------------------------Misc------------------------------------
+
+1. Will modern browsers wont render html latest tags if without doctype?
+2. What are non semanti elements.
+3. what are void elements in HTML.
+4. What are psedo classes in CSS.
+5. What is CSS specifity.
+7. Whats the position default value in CSS.
+8. Whats the difference between static and absolute position.
+9.  What is the use of spread operator in JS.
+10. What is the difference between spread and rest.
+11. How to clear settimeout after sometime using timer.
+12. How clear timeout knows when to clear the timeout.
+13. Sequence of life cycle methods.
+14. What is the usecase of useRef only works.
+15. What is a reducer.
+16. What is a react fragment.
+17. Can we use div instead of react fragment.
+18. Why react fragments preffered over divs.
+
+19. var a = [{
+  
+  name: 'akhil',
+  age: 20,
+  city : 'tanuku',
+},
+         {
+           name: 'sravan',
+           age:24,
+           city: 'andhra'
+         
+  
+}];
+
+var b = a.map(a=> {
+  delete a.city;
+  return a;
+});
+
+console.log(b);
+
+
+
+20. update employees set level=(level+1) where level in (0,1) order by level desc;
+
+
+-------------------------------------------Deloitte and Recro-July 1st,2021------------------------------------------------------------
+
+
+1. Differnce b/w promise and observable.
+2. Explain generators.
+3. What are rest parameters.
+4. Can we have multiple headers in html.
+5. Tags removed from html.
+6. New features of html5.
+7. Real time example of NaN.
+8. How do we clone an Object.
+9. Canvas in HTML.
+10. Figure tag in HTML.
+12. Difference b/w block,inblock and inline elements.
+13. What are queryselectors.
+14. Srting reverse without build in functions.
+15. What are attributes and properties in Object.
+16. Arrow functions.
+17. Call,apply,bind method implementation.
+18. Implement a counter from 1 to 5 in react.
+19. Amazon web (interchnage all and serach icon in css inspect).
+
+
+
+
+
+
+
+
+
+
+-----------------------------------July 14th - PublicSapient and PipeCandy-----------------------------------------------
+
+1. ATM denominations problem.
+2. Method to show both sum(2,3) and sum(2)(3).
+3. Balancing the paranthesis.
+4.  Apply coloutr to lists
+   <ul>
+     <li>
+   list 1
+ </li>
+  <li>
+ list 2
+ </li>
+ <li>
+  list 3
+ </li>
+  </ul>
+5.flex: 0 2 20% and flex:1
+6. (function(){ var a = b = 5; })(); 
+ console.log("a defined? " + (typeof a !== 'undefined')); 
+ console.log("b defined? " + (typeof b !== 'undefined'));
+7. Create 3 divs place them side by side at equidistint using flex.
+8. Javascript design patterns.
+9. Pure and impure functions.
+10. HTML5 newly added and deleted elements.
+11. Using closure how garbage collector works.
+12. How you acheive optimisation in JS.
+13. Priority order of hoisting.
+14. Psedo classes and psedo elements.
+15. Rest and spread operator.
+16. Map , reduce , filter.
+17. Usage of semantic elements.
+18.  (function(){ 
+  console.log("one");
+  setTimeout(function (){console.log("two")},3000)
+console.log("three");
+  setTimeout(function (){console.log("four")},2000)})(); 
+19. Event bubbling.
+20. Semantic elements in html.
+
+
+
+-------------------------------Wissen and PWC Mains 16-July-2021-------------------------------------------------------------
+
+1.
+/*
+Design a form with three independent components
+Dropdown Component - [{label:’GET’,value=’get’},{label:’POST’,value=’post’}]
+Input component - [ URL - String ]
+Button Component - onSubmit()
+
+User will select one of the options in the dropdown and enter the URL in the input box, if both values are valid then enable the submit button.
+OnClick on the submit button displays the selected dropdown and input values in the UI.
+OnClick on the submit button and send the request URL to the server using either axios or fetch api. (Optional).
+
+Note:
+Coding environment: https://codesandbox.io/
+Fake API: https://jsonplaceholder.typicode.com/todos
+*/
+
+2. Implement a protected router with 3pages ----  user details , authnecation login home list.
+3. {} y we use while importing in react.
+4. implicit and explicit arrow functions.
+5. Box model in detail in css.
+6. Uncontrolled components in react.
+7. Mapstateto props and dispatchstatetoprops.
+8. Redux flow and usage of action creators.
+9. How we will upload a file in html.
+10.
+ console.log("1");
+
+setTimeout(()=>{
+  console.log("2")
+},0)
+setTimeout(()=>{
+  console.log("3")
+},1000)
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+   console.log("6")
+  }, 1000);
+});
+
+console.log("5");
+
+
+============
+
+// var a = 'hi';
+
+// function abc (){
+
+// console.log(a);
+
+// //let a = 'hello';
+// }
+// abc();
+
+// function B (){
+//    var Object = {};
+
+//  Object.name= name;
+//   Object.age=age;
+//   return object;
+// }
+
+// var Object = new B("akhil",20);
+
+let A ={
+  
+}
+[4:06 PM] Paladugu Venkata Ravindra Babu (Trianz)
+    
+var a = 'hi';
+
+function abc (){​​​
+console.log(a);
+let a = 'hello';
+}​​​
+abc();
+​[4:08 PM] Paladugu Venkata Ravindra Babu (Trianz)
+    def();
+var def = function (){​​​}​​​
+​[4:15 PM] Paladugu Venkata Ravindra Babu (Trianz)
+    function A (name){​​​
+
+this.name = '';
+}​​​
+function B (name, age){​​​
+this.age = age;
+}​​​
+​[4:16 PM] Paladugu Venkata Ravindra Babu (Trianz)
+    
+create object for only B
+ A, do not want create object
+​[4:17 PM] Paladugu Venkata Ravindra Babu (Trianz)
+    new B('akhil', 20)

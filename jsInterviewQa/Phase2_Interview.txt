@@ -1,0 +1,30 @@
+===============================================
+
+1.  [2,3,5,4,7,10,8] --> find two elements which multiplies to 20
+2.  merge(c, ab) --> cab, acb, abc and print all possible combinartions.
+3.  const arr1=[
+   {
+     firstname:'akhil',
+     lastname:'sravan'
+   },
+   {
+     firstname:'akhil1',
+     lastname:'sravan1'
+   },
+   {
+     firstname:'akhil2',
+     lastname:'sravan2'
+   },
+   {
+     firstname:'akhil'
+   }
+ ];
+
+WAF to print firstname and null if not prresent.
+
+4. WAP 328b --> 328(b) , 21e34 --> 2134(e)
+
+5. Memory leaks in React.
+6. Redux store methods and functions.
+7. How to make classbased components to use hooks inside.
+8. 

@@ -1,0 +1,197 @@
+---------------------------------------Hoisting-------------------
+
+console.log(x);
+sum();
+
+var x=10;
+
+function sum(){
+  console.log("hoisted");
+}
+
+Note:let and const cannot be hoisted.
+-------------------------------------------------------------------
+
+-------------------------CallBack----------------------------------
+
+function one(call_two){
+  console.log("step1");
+  call_two();
+}
+
+function two(){
+  console.log("step2");
+}
+
+one(two);
+
+----------------------------CallBackHell------------------------------
+
+
+let callbackhell = () =>{
+
+  setTimeout(()=>{
+    console.log("step1")
+    setTimeout(()=>{
+      console.log("step2")
+      setTimeout(()=>{
+        console.log("step3")
+        
+          
+      },3000)
+    },2000)
+  },1000)
+
+};
+
+callbackhell();
+
+----------------------------Closure-------------------------------------
+
+
+function x(){
+  var a=7;
+  function y(){
+    console.log(a);
+  }
+  y();
+}
+x();
+
+
+---------------------------------------Call,apply,bind-----------------------------------------------------------
+
+//BindMethod
+
+let obj1 = {
+  num1 : 40,
+  num2 : 20
+};
+
+let obj2 = {
+  num1 : 50,
+  num2 : 30
+};
+
+
+const add = function(num3,num4){
+  console.log(this.num1+this.num2+num3+num4)
+}
+
+
+let sum1 = add.bind(obj1,2,6);
+let sum2 = add.bind(obj2,1,5);
+
+sum1();
+sum2();
+
+
+//CallMethod
+
+let obj1 = {
+  num1 : 40,
+  num2 : 20
+};
+
+let obj2 = {
+  num1 : 50,
+  num2 : 30
+};
+
+
+const add = function(num3,num4){
+  console.log(this.num1+this.num2+num3+num4)
+}
+
+
+add.call(obj1,6,2);
+add.call(obj2,5,7);
+
+
+//ApplyMethod
+
+
+let obj1 = {
+  num1 : 40,
+  num2 : 20
+};
+
+let obj2 = {
+  num1 : 50,
+  num2 : 30
+};
+
+
+const add = function(num3,num4){
+  console.log(this.num1+this.num2+num3+num4)
+}
+
+
+add.apply(obj1,[5,2]);
+add.apply(obj2,[5,6]);
+
+
+
+-----------------------------------Promises-----------------------------------------------------
+
+const myPromise = new Promise(function(resolve,reject){
+   var x= "akhil";
+  var y ="akhils";
+  if(x===y){
+    resolve();
+  }
+  else{
+    reject();
+  }
+});
+ myPromise.then(function(){
+   console.log("x and y matched");
+ }).catch(function(){
+   console.log("some error");
+ });
+
+
+
+const myPromise  = new Promise(function(resolve,reject){
+	fetch('https://jsonplaceholder.typicode.com/users')
+	.then(response => response.json())
+	.then(json => resolve(json))
+})
+
+myPromise.then(resp => console.log(resp))
+.catch(()=> console.log("promise failed"))
+.then(()=> console.log("promise completed"))
+
+
+
+
+
+
+
+
+
+---------------------------------Funtion Currying------------------------------------------
+
+let multiply = function (x,y){
+   console.log(x*y);
+ 
+}
+
+let MMtwo = multiply.bind(null,2);
+
+MMtwo(5);
+
+const curry = function(originalFunc){
+        return function(a){
+            return function(b){
+                return originalFunc(a,b)
+            }
+        }
+    }
+
+const originalFunc =(a,b)=>{
+        return a+b;
+    }
+
+let curriedSum = curry(originalFunc);
+curriedSum(1)(2)

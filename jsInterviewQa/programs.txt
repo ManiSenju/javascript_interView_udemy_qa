@@ -1,0 +1,195 @@
+---------------------Remove Duplicates in an array-----------------------------------
+
+Method:1
+
+const A = [1,2,3,2,3,5];
+
+function removeDuplicates(){
+  const b = [...new Set(A)];
+  
+  console.log(b);
+  
+}
+
+removeDuplicates(A);
+
+Method:2
+
+
+function Uniquearrey(){
+  const B = [];
+  for (let i of A){
+    if(B.indexOf(i)===-1){
+      B.push(i)
+    }
+  }
+  console.log(B);
+}
+
+Uniquearrey(A);
+
+Method 3:
+
+const A = [1,2,2,4,6,6,8];
+const B = A.filter((n,index) => A.indexOf(n) === index)
+
+
+-------------------Reverse an array-----------------------------------------------
+
+
+Method:1
+
+const A = [1,2,3,2,3,5];
+
+function Reversearray(){
+  const b = A.reverse()
+  
+  console.log(b);
+  
+}
+
+Reversearray(A);
+
+Method:2
+
+
+function Reversearray(){
+  const B = [];
+  for (let i=A.length-1;i>=0;i--){ 
+      B.push(A[i])
+    }
+  
+  console.log(B);
+}
+
+Reversearray(A);
+
+
+
+------------------String Reverse------------------------
+
+var str1 = "Welcome to this Javascript Guide!";
+
+function revstd(){
+  var str2 = str1.split('').reverse().join('');
+  
+  console.log(str2)
+}
+revstd(str1);
+
+
+
+-------------------Anagram---------------------------------
+
+
+
+function isAnagram(a,b){
+  let c = a.toLowerCase().split('').sort().join('');
+   let d = b.toLowerCase().split('').sort().join('');
+ 
+  
+  if (c===d){
+    console.log("ITS ANAGRAM");
+  }
+  
+  else {
+    console.log('its not a anagram');
+  }
+  
+  
+}
+
+isAnagram('Akhial','khaiL');
+
+function isAnagram(s1,s2){
+	if(s1.length !== s2.length) return false;
+
+	let str1 = s1.toLowerCase().split('').sort().join('')
+	let str2 = s2.toLowerCase().split('').sort().join('')
+
+	if(str1 === str2)
+		return true
+	else
+		return false
+}
+
+
+
+-----------------------------------Balancing Paranthesis-------------------------------------------
+
+// "(){}[]"   =>  True
+// "([{}])"   =>  True
+// "(({}))[]" =>  True
+// "(}"       =>  False
+// "[(])"     =>  False
+// "[({})](]" =>  False
+// /
+  
+let bracketBalanced = function(str){
+  let stack =[]
+  let b=str.length;
+  let map = {
+    '(':')','{':'}','[':']'
+  }
+  for(let i=0;i<b;i++){
+    if(str[i] == '('|| str[i] == '{' || str[i] == '[')
+      stack.push(str[i])
+    else{
+      let removed = stack.pop();
+      if(str[i] !== map[removed])
+        return false
+    }
+  }
+  if(stack.length !== 0) return false;
+  return true;
+}
+  console.log(bracketBalanced("(({}))[]"));
+  
+
+----------------------------------------------Array Flattening---------------------------------------------------------------------------------
+
+Method : 1
+
+const arr =[[1],[1,12,3],[1,2,3,4]];
+
+var newArray = Array.prototype.concat.apply([], arr);
+console.log(newArray);
+
+output: [1,1,12,3,1,2,3,4]
+
+
+Method : 2
+
+const arrays =[[1],[1,12,3],[1,2,3,4]];
+
+array1 = arrays.reduce((a, b)=>a.concat(b)
+, []);
+ 
+
+let uinq = [... new Set(array1)];
+console.log(uinq);
+
+Method : 3
+
+const arrays =[[1],[1,12,3],[1,2,3,4]];
+
+array1 = arrays.flat();
+
+console.log(array1);
+
+Method : 4
+
+const arrays =[[1],[1,12,3],[1,2,3,4]];
+const result = []
+const flatten = function(arr, result) {
+  for (let i = 0, length = arr.length; i < length; i++) {
+    const value = arr[i];
+    if (Array.isArray(value)) {
+      flatten(value, result);
+    } else {
+      result.push(value);
+    }
+  }
+  return result;
+};
+console.log(flatten(arrays,[]));

@@ -1,0 +1,177 @@
+======================02-Aug-2021===========Accenture and Webonise============================
+
+1.What are transpiler and polyfills.
+2.What is cohersion.
+3.Shallow and deep copy examples demo.
+4.In array of objects print name of all in single array.
+5.Web pack and babel y.
+6.How we set webpack confiq.
+7.UseContext and UseReducer hook.
+8.Context api in redux.
+9.explain redux life cycle flow.
+10.const d=[[0, 1], [2, 3]].reduce(
+  (acc, cur) => {
+    return acc.concat(cur);
+  },
+  [1, 2],
+);
+
+console.log(d);
+
+11.console.log(typeof typeof 1);
+
+12.var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y);
+
+13.named exports and default exports.
+14. Why component extends React.Coponent
+15.How we define a class variable in JSX and in normal html div.
+16.Function currying demo.
+17.differencwe b/w dependies and dev dependencies and examples.
+18. in package.json ^ means. why package.json.
+19.Difference b/w async await and promise.
+20.Why we use {Component} in react in import/export.
+
+
+=========================18-AUG-2021===========ORACLE==============================
+
+1.var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);  // bar
+        console.log("outer func:  self.foo = " + self.foo);  // bar
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo); // undefined
+            console.log("inner func:  self.foo = " + self.foo); // bar
+        }());
+    }
+};
+myObject.func()
+
+2.document.writeln(10+20+"30");  //"3030"
+  document.writeln("10"+20+30); // 102030
+
+
+
+3.const obj1=
+   [
+   {
+  id: 11,
+  name: 'akhil',
+  email:'akhil1@gmail.com'
+   },
+   {
+  
+  id: 12,
+  name: 'sravan',
+  email:'akil1@gmail.com'
+   }
+   ];
+
+const b = obj1.find((element)=> element.id==11
+  
+);
+console.log(b.name);
+
+4.var students = [
+{
+    name: "Mike",
+    track: "track-a",
+    achievements: 23,
+    points: 400,
+  },
+  {
+    name: "james",
+    track: "track-a",
+    achievements: 2,
+    points: 21,
+  }
+]
+
+students.forEach(myFunction);
+
+function myFunction(item, index) {
+  for (var key in item) {
+    console.log(item[key])
+  }
+}
+
+
+===================
+
+
+//  // let x1={a:1,b:1,c:1};
+// // let x2={a:4,b:4,d:4};
+// // //O/P: {a:4,b:4,c:1,d:4}
+// // let x3 = {...x1,...x2};
+// // console.log(x3);
+
+
+
+// const unstructuredList = [
+// {
+// Name: "Harry William",
+// Age: 21
+// },
+// {
+// Name: "Robert James",
+// Age: 35
+// },
+// {
+// Name: "Julie Wurglitz",
+// Age: 48
+// }
+// ]
+
+// const structuredList = [
+// {
+// FirstName: 'Harry',
+// LastName: 'William',
+// Age:21
+// },
+// {
+// FirstName: 'Robert',
+// LastName: 'James',
+// Age:35
+// },
+// {
+// FirstName: 'Julie',
+// LastName: 'Wurglitz',
+// Age:48
+// }
+// ] 
+
+      
+ const a = "abc";
+
+ const b = [...a];
+
+console.log(b);
+ 
+console.log(typeof b);
+
+
+
+
+
+============================wissen==========
+
+Shalu Kumari10:08 AM
+Design a form with three independent components
+Dropdown Component - [{label:’GET’,value=’get’},{label:’POST’,value=’post’}]
+Input component - [ URL - String ]
+Button Component - onSubmit()
+
+User will select one of the options in the dropdown and enter the URL in the input box, if both values are valid then enable the submit button.
+OnClick on the submit button displays the selected dropdown and input values in the UI.
+OnClick on the submit button and send the request URL to the server using either axios or fetch api. (Optional).
+
+Note:
+Coding environment: https://codesandbox.io/
+Fake API: https://jsonplaceholder.typicode.com/todos
+Shalu Kumari10:43 AM
+If you want to create your own method attached to toString object for eg:- 'xyz'.toMyCase()*[middle letter of string to be capitalized -> xYz], how would you achieve using prototype?
