@@ -1,0 +1,98 @@
+// Birlasoft first round
+1.)HTML apis, image map
+2.)web storages -- local,session
+3.)REST vs SOAP
+4.)diff b/w spread and rest
+5.)hoisting 
+6.)Event Loop in Nodejs
+7.)Child process in Nodejs
+8.)REPL in Node
+9.)timeout methods in NodeJs(setInterval,setTimeout,setImmediate)
+10.)functional Comp vs Clas Comp in React , virtual dom
+11.) state vs props
+12.)UseContext vs Redux
+13.)nodejs is async?
+14.)stop multiple rerendering of React Components
+15.)Pseudo Classes, pseudo Elements
+16.)new elements added in HTML5
+17.) Write React program to fetch some random data
+
+export default function App() {
+  const [data,setData] = React.useState([])
+  React.useEffect(_=>{
+    fetch('https://jsonplaceholder.typicode.com/todos').then(res=>res.json()).then(data=>setData(data))
+  })
+  return (
+    <div>
+      <h1>Hello StackBlitz!</h1>
+      <ul>{data.map(d=><li key={d.id}>{d.title}</li>)}</ul>
+    </div>
+  );
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Nagaro first round -30 min
+1.)virtual dom in react
+2.)redux vs context
+3.)props vs state
+4.)how to change props
+5.) what is jsx ,why it is needed?
+6.)server side rendering through node
+7.)React 18.x features
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// altimetrik first round
+1.) remove all duplicated from array
+input = [1,2,3,1,2,3,4,5,6]
+o/p =[4,5,6]
+
+var a = [1,2,3,1,2,3,4,5,6]
+
+var removeDuplicate =function(){
+	var count ={};
+	var b=[]
+	for(var i=0;i<a.length;i++){
+		if(count[a[i]]){
+			count[a[i]]++
+		}else{
+			count[a[i]] =1
+		}
+	}
+	for(var key in count){
+		if(count[key] ==1){
+			b.push(+key)
+		}
+	}
+	return b;
+}
+
+2.) React Program to send props from parent to child
+export default function App() {
+  const childCallback =(e)=>{
+    console.log(e)
+  }
+  return (
+    <div>
+      <h1>Parent</h1>
+      <Child callback ={childCallback}></Child>
+    </div>
+  );
+}
+
+const Child =({callback})=>{
+  const testClick =(e)=>{
+    callback('test')
+  }
+  
+  return(<div>
+    <h3>Child</h3>
+    <button onClick={testClick}>Test</button>
+  </div>)
+}
+
+
+
