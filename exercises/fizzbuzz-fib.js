@@ -29,3 +29,20 @@ function fib(n){
 	return n<1 ? 0 : n<=2 ? 1 : fib(n-1)+fib(n-2);
 }
 console.log(fib(5))
+
+//memoize fib
+function memoize(fn){
+	const cache ={}
+	return function(...args){
+		if(cache[args]){
+			return cache[args]
+		}else{
+			const result = fn.apply(this,args)
+			cache[args] = result
+			return result
+		}
+	}
+}
+
+const memFib = memoize(fib)
+console.log(memFib(5))
