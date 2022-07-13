@@ -46,7 +46,23 @@
         }
 
       }
+------------------------------
+// do array flat using js
+const array = [1, 1, [2, 2], [[3, [4], 3], 2]]
 
+function flatArray(arr){
+const flatArr =[]
+arr.forEach(item=>{
+	if(Array.isArray(item)){
+  	flatArr.push(...flatArray(item))
+  }else{
+  flatArr.push(item)
+  }
+})
+return flatArr
+}
+
+console.log(flatArray(array))
 
 
 
