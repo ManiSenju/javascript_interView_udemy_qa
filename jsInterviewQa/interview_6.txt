@@ -1,0 +1,42 @@
+HighSpot Interview Questions:
+  1.)Design stackoverflow pages on highlevel-->login page and questions page
+  2.)React Js --> life cycle methods and hooks
+  3.)Implement marquee tag behaviour using reactjs without using native tags
+  4.)React js live coding question --> in a web page get search results and do some operations around it
+  5.)Ployfill for promise.all
+  6.)memoise
+  7.)How to reduce the load times for a page --> caching static assets , reduce webpack size etc.
+  8.)Pros of using CDN instead of using our servers
+----------------------------------------------------------------------
+
+Storable Interview Questions:
+  1.)Multithread in node js
+  2.)Sync and Asynchronous in Node js
+  3.)Binary Search
+  4.)Coding Question : add only unique elements in an array
+    answer: const a = [2,3,4,5,2,3];
+            output should be : 4+5
+            //add a hashMap and then take only 1 count keys
+            const map = {}
+            for(let i=0; i<a.length;i++){
+            if(map[a[i]]){
+              map[a[i]] = map[a[i]]+1
+            }else {
+              map[a[i]] = 1;
+            }
+            }
+            let sum =0;
+            for(let key in map){
+              if(map[key] ===1){
+              sum+=key
+              }
+            }
+            return sum;
+            
+  5.)React js live coding question about form fields
+
+  6.)Difference b/w CI and CD
+  7.)Jr Dev vs Sr Dev , responsibilities of Sr Dev
+  8.)Monolithic vs micro services
+  9.)oops vs javascript
+    
